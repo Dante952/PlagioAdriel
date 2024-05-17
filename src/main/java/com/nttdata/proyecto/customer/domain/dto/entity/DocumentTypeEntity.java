@@ -1,8 +1,6 @@
 package com.nttdata.proyecto.customer.domain.dto.entity;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,6 +9,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class DocumentTypeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

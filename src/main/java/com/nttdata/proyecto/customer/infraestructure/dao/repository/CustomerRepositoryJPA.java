@@ -9,9 +9,4 @@ import java.util.List;
 @Repository
 public interface CustomerRepositoryJPA extends JpaRepository<CustomerEntity, String> {
 
-    List<CustomerEntity> findAll();
-
-
-
-
 }

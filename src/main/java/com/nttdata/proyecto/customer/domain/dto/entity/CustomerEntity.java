@@ -3,12 +3,15 @@ package com.nttdata.proyecto.customer.domain.dto.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "T_CUSTOMER")
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,5 +29,9 @@ public class CustomerEntity {
 
     @Column(name="LAST_NAME", nullable=false, length=255)
     private String  lastName;
+
+
+    @Column(name="CREATED", nullable=false, length=255)
+    private Date dateCreated;
 
 }
