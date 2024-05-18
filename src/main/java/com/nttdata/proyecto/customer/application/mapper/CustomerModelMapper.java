@@ -22,7 +22,6 @@ public interface CustomerModelMapper {
                 .firstName(customerRequest.getNombre())
                 .lastName(customerRequest.getApellido())
                 .dateCreated(LocalDate.now())
-
                 .build();
     }
 }

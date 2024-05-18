@@ -23,11 +23,11 @@ import java.util.List;
 @RequestMapping(value ="/customer")
 public class CustomerController {
 
-    private final CustomerRepository customerRepository;
+    private final CustomerExternalServiceCustom customerExternalServiceCustom;
 
     @PostMapping(value = "/save")
     public ResponseEntity<CustomerResponse> saveCustomer(@Valid @RequestBody CustomerRequest customerRequest){
-        customerRepository.saveCustomer(CustomerModelMapper.INSTANCE.mapToCustomerModel(customerRequest));
+        customerExternalServiceCustom.saveCustomerModel(CustomerModelMapper.INSTANCE.mapToCustomerModel(customerRequest));
         return ResponseEntity.status(HttpStatus.CREATED).body(
                 CustomerResponse.builder()
                         .code("200")
@@ -39,7 +39,7 @@ public class CustomerController {
     @GetMapping("/customerList")
     public ResponseEntity<List<CustomerModel>> toListCustomer(){
                 return ResponseEntity.status(HttpStatus.CREATED).body(
-                customerRepository.listCustomers()
+                customerExternalServiceCustom.listCustomerModel()
         );
     }
 
