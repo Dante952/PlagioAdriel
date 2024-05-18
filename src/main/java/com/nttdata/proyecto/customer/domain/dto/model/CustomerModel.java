@@ -3,6 +3,7 @@ package com.nttdata.proyecto.customer.domain.dto.model;
 import com.nttdata.proyecto.customer.domain.dto.entity.DocumentTypeEntity;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -22,5 +23,5 @@ public class CustomerModel {
 
     private String  lastName;
 
-    private Date dateCreated;
+    private LocalDate dateCreated;
 }

@@ -5,5 +5,7 @@ import com.nttdata.proyecto.customer.domain.dto.model.CustomerModel;
 import java.util.List;
 
 public interface CustomerRepository {
-    public List<CustomerModel> listCustomers();
+    List<CustomerModel> listCustomers();
+
+    CustomerModel saveCustomer( CustomerModel customerModel );
 }

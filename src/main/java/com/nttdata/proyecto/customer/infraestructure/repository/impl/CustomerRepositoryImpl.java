@@ -22,4 +22,13 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         //return customerRepositoryJPA.findAll().stream().map(CustomerEntityMapper.INSTANCE::mapToCustomerModel).collect(Collectors.toList());
         return CustomerEntityMapper.INSTANCE.mapToCustomerModel(customerRepositoryJPA.findAll());
     }
+
+    @Override
+    public CustomerModel saveCustomer(CustomerModel customerModel) {
+        return CustomerEntityMapper.INSTANCE.mapToCustomerModel(
+                customerRepositoryJPA.save(CustomerEntityMapper.INSTANCE.mapToCustomerEntity(customerModel))
+        );
+    }
+
+
 }

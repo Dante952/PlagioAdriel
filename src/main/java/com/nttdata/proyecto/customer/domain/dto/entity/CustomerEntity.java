@@ -3,6 +3,7 @@ package com.nttdata.proyecto.customer.domain.dto.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -32,6 +33,6 @@ public class CustomerEntity {
 
 
     @Column(name="CREATED", nullable=false, length=255)
-    private Date dateCreated;
+    private LocalDate dateCreated;
 
 }

@@ -9,7 +9,7 @@ import org.mapstruct.factory.Mappers;
 import java.util.List;
 
 
-@Mapper(componentModel = "spring")
+@Mapper
 public interface CustomerEntityMapper {
 
     CustomerEntityMapper INSTANCE = Mappers.getMapper(CustomerEntityMapper.class);
@@ -23,4 +23,13 @@ public interface CustomerEntityMapper {
     CustomerModel mapToCustomerModel(CustomerEntity customerEntity);
 
     List<CustomerModel> mapToCustomerModel(List<CustomerEntity> customerEntities);
+
+    @Mapping(target = "id", source = "id")
+    @Mapping(target = "documentType.id", source = "documentType")
+    @Mapping(target = "document", source = "document")
+    @Mapping(target = "firstName", source = "firstName")
+    @Mapping(target = "lastName", source = "lastName")
+    @Mapping(target = "dateCreated", source = "dateCreated")
+    CustomerEntity mapToCustomerEntity(CustomerModel customerModel);
+
 }

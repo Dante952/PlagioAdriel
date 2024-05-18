@@ -2,6 +2,7 @@ package com.nttdata.proyecto.customer.infraestructure.controller;
 
 import com.nttdata.proyecto.customer.application.dto.request.CustomerRequest;
 import com.nttdata.proyecto.customer.application.dto.response.CustomerResponse;
+import com.nttdata.proyecto.customer.application.mapper.CustomerModelMapper;
 import com.nttdata.proyecto.customer.application.service.CustomerExternalServiceCustom;
 import com.nttdata.proyecto.customer.domain.dto.entity.CustomerEntity;
 import com.nttdata.proyecto.customer.domain.dto.entity.DocumentTypeEntity;
@@ -26,6 +27,7 @@ public class CustomerController {
 
     @PostMapping(value = "/save")
     public ResponseEntity<CustomerResponse> saveCustomer(@Valid @RequestBody CustomerRequest customerRequest){
+        customerRepository.saveCustomer(CustomerModelMapper.INSTANCE.mapToCustomerModel(customerRequest));
         return ResponseEntity.status(HttpStatus.CREATED).body(
                 CustomerResponse.builder()
                         .code("200")

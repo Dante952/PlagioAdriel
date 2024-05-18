@@ -26,6 +26,4 @@ public class CustomerRequest {
 
     private String documento;
 
-    private String tipoCliente;
-
 }
