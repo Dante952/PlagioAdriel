@@ -23,4 +23,9 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerModel saveCustomerModel(CustomerModel customerModels) {
         return customerRepository.saveCustomer(customerModels);
     }
+
+    @Override
+    public CustomerModel updateCustomerModel(CustomerModel customerModels) {
+        return customerRepository.updateCustomer(customerModels);
+    }
 }

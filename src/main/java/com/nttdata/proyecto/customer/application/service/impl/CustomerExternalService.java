@@ -21,4 +21,9 @@ public class CustomerExternalService implements com.nttdata.proyecto.customer.ap
     public CustomerModel saveCustomerModel(CustomerModel customerModels) {
         return customerService.saveCustomerModel(customerModels);
     }
+
+    @Override
+    public CustomerModel updateCustomerModel(CustomerModel customerModels) {
+        return customerService.updateCustomerModel(customerModels);
+    }
 }

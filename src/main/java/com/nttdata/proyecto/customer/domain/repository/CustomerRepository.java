@@ -8,4 +8,6 @@ public interface CustomerRepository {
     List<CustomerModel> listCustomers();
 
     CustomerModel saveCustomer( CustomerModel customerModel );
+
+    CustomerModel updateCustomer( CustomerModel customerModel );
 }

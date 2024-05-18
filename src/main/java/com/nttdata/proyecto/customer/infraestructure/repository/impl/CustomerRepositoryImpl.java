@@ -30,5 +30,12 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         );
     }
 
+    @Override
+    public CustomerModel updateCustomer(CustomerModel customerModel) {
+        return CustomerEntityMapper.INSTANCE.mapToCustomerModel(
+                customerRepositoryJPA.save(CustomerEntityMapper.INSTANCE.mapToCustomerEntity(customerModel))
+        );
+    }
+
 
 }

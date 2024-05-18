@@ -23,4 +23,9 @@ public class CustomerExternalServiceCustom implements com.nttdata.proyecto.custo
     public CustomerModel saveCustomerModel(CustomerModel customerModels) {
         return customerExternalService.saveCustomerModel(customerModels);
     }
+
+    @Override
+    public CustomerModel updateCustomerModel(CustomerModel customerModels) {
+        return customerExternalService.updateCustomerModel(customerModels);
+    }
 }

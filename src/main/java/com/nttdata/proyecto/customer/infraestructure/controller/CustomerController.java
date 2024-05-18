@@ -1,6 +1,7 @@
 package com.nttdata.proyecto.customer.infraestructure.controller;
 
 import com.nttdata.proyecto.customer.application.dto.request.CustomerRequest;
+import com.nttdata.proyecto.customer.application.dto.request.CustomerUpdateRequest;
 import com.nttdata.proyecto.customer.application.dto.response.CustomerResponse;
 import com.nttdata.proyecto.customer.application.mapper.CustomerModelMapper;
 import com.nttdata.proyecto.customer.application.service.CustomerExternalServiceCustom;
@@ -35,6 +36,18 @@ public class CustomerController {
                         .build()
         );
     }
+
+    @PutMapping(value = "/update")
+    public ResponseEntity<CustomerResponse> updateCustomer(@Valid @RequestBody CustomerUpdateRequest customerRequest){
+        customerExternalServiceCustom.saveCustomerModel(CustomerModelMapper.INSTANCE.mapToCustomerUpdateModel(customerRequest));
+        return ResponseEntity.status(HttpStatus.CREATED).body(
+                CustomerResponse.builder()
+                        .code("200")
+                        .message("Successfully created client: " )
+                        .build()
+        );
+    }
+
 
     @GetMapping("/customerList")
     public ResponseEntity<List<CustomerModel>> toListCustomer(){

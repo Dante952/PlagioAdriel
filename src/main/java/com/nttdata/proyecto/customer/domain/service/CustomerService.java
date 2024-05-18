@@ -9,4 +9,6 @@ public interface CustomerService {
     List<CustomerModel> listCustomerModel();
 
     CustomerModel saveCustomerModel(CustomerModel customerModels);
+
+    CustomerModel updateCustomerModel(CustomerModel customerModels);
 }
