@@ -1,0 +1,2 @@
+#!/bin/bash
+mvn clean verify sonar:sonar -Dsonar.projectKey=ProyectoSonar -Dsonar.projectName='ProyectoSonar' -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_197ca16523490b11cc9e3b7708a4806f7220db1d
