@@ -8,7 +8,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -19,7 +18,6 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 
     @Override
     public List<CustomerModel> listCustomers() {
-        //return customerRepositoryJPA.findAll().stream().map(CustomerEntityMapper.INSTANCE::mapToCustomerModel).collect(Collectors.toList());
         return CustomerEntityMapper.INSTANCE.mapToCustomerModel(customerRepositoryJPA.findAll());
     }
 

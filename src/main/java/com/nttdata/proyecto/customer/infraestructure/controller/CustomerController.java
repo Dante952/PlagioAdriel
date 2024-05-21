@@ -5,13 +5,8 @@ import com.nttdata.proyecto.customer.application.dto.request.CustomerUpdateReque
 import com.nttdata.proyecto.customer.application.dto.response.CustomerResponse;
 import com.nttdata.proyecto.customer.application.mapper.CustomerModelMapper;
 import com.nttdata.proyecto.customer.application.service.CustomerExternalServiceCustom;
-import com.nttdata.proyecto.customer.domain.dto.entity.CustomerEntity;
-import com.nttdata.proyecto.customer.domain.dto.entity.DocumentTypeEntity;
 import com.nttdata.proyecto.customer.domain.dto.model.CustomerModel;
-import com.nttdata.proyecto.customer.domain.repository.CustomerRepository;
-import com.nttdata.proyecto.customer.infraestructure.dao.repository.CustomerRepositoryJPA;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

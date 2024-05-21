@@ -1,6 +1,5 @@
 package com.nttdata.proyecto.customer.application.dto.request;
 
-import com.nttdata.proyecto.customer.application.dto.validation.DocumentTypeValidation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
