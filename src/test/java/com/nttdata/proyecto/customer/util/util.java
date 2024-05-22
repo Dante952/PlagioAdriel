@@ -37,7 +37,7 @@ public class util {
                 .document("123456789")
                 .firstName("Dante")
                 .lastName("Torres")
-                .documentType(DocumentTypeEntity.builder().id(1).documentName("Dni").build())
+                .documentType(DocumentTypeEntity.builder().id(1).documentDescription("descipcion").documentName("Dni").build())
                 .dateCreated(LocalDate.now())
                 .build());
     }
@@ -48,7 +48,7 @@ public class util {
                 .document("123456789")
                 .firstName("Dante")
                 .lastName("Torres")
-                .documentType(DocumentTypeEntity.builder().id(1).documentName("Dni").build())
+                .documentType(DocumentTypeEntity.builder().id(1).documentName("Dni").documentDescription("descipcion").build())
                 .dateCreated(LocalDate.now())
                 .build();
     }
